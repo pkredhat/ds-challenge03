@@ -2,11 +2,11 @@
 	"folders": [
 		{
 			"name": "src",
-			"path": "${PROJECTS_ROOT}/ds-challenge03/src"
+			"path": "/projects/ds-challenge03/src"
 		},
 		{
 			"name": "test",
-			"path": "${PROJECTS_ROOT}/ds-challenge03/src"
+			"path": "/projects/ds-challenge03/test"
 		}
 	],
 	"extensions": {
