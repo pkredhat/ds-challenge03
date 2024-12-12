@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\ds-challenge-03\ds-challenge-03.csproj" />
+    <ProjectReference Include="../src/ds-challenge-03.csproj" />
   </ItemGroup>
 
 </Project>
