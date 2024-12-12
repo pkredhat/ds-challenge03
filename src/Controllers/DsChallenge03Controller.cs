@@ -14,7 +14,7 @@ public class GreetChallengeAttendeesController : ControllerBase
 }
 
 [ApiController]
-[Route("api/greetuser")]
+[Route("api/hello")]
 public class GreetChallengeAttendeeWithNameController : ControllerBase
 {
     [HttpGet(Name = "GreetChallengeAttendeeWithName")]
