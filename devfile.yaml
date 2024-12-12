@@ -1,6 +1,6 @@
 schemaVersion: 2.2.2
 metadata:
-  name: dotnet
+  name: challenge3-workspace
 attributes:
   .vscode/extensions.json: |
     {
@@ -22,6 +22,9 @@ components:
       volumeMounts:
         - name: nuget
           path: /home/user/.nuget
+      env:
+        - name: VSCODE_DEFAULT_WORKSPACE
+          value: "${PROJECTS_ROOT}/ds-challenge03/challenge3-settings.code-workspace"
   - name: nuget
     volume:
       size: 1G
