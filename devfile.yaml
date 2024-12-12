@@ -1,14 +1,17 @@
 schemaVersion: 2.2.2
 metadata:
   name: dotnet
+attributes:
+  .vscode/extensions.json: |
+    {
+      "recommendations": [
+      "cnshenj.vscode-task-manager"
+      ]
+    }
 components:
   - name: tools
     container:
       image: registry.redhat.io/devspaces/udi-rhel8:3.17
-      memoryLimit: '2Gi'
-      memoryRequest: '1Gi'
-      cpuLimit: '1'
-      cpuRequest: '0.5'
       mountSources: true
       endpoints:
         - exposure: public
@@ -19,9 +22,6 @@ components:
       volumeMounts:
         - name: nuget
           path: /home/user/.nuget
-      # env:
-      #   - name: VSCODE_DEFAULT_WORKSPACE
-      #     value: "${PROJECTS_ROOT}/devspaces-gamification/ds-gamification.code-workspace"
   - name: nuget
     volume:
       size: 1G
@@ -30,7 +30,7 @@ commands:
     exec:
       label: 1.Update dependencies
       component: tools
-      workingDir: ${PROJECTS_ROOT}/devspaces-gamification/ds-challenge-03
+      workingDir: ${PROJECTS_ROOT}/ds-challenge03/src
       commandLine: "dotnet restore"
       group:
         kind: build
@@ -38,7 +38,7 @@ commands:
     exec:
       label: 2.Build
       component: tools
-      workingDir: ${PROJECTS_ROOT}/devspaces-gamification/ds-challenge-03
+      workingDir: ${PROJECTS_ROOT}/ds-challenge03/src
       commandLine: "dotnet build"
       group:
         kind: build
@@ -46,7 +46,7 @@ commands:
     exec:
       label: 3.Test
       component: tools
-      workingDir: ${PROJECTS_ROOT}/devspaces-gamification/tests/Challenge3Tests
+      workingDir: ${PROJECTS_ROOT}/ds-challenge03/test
       commandLine: "dotnet test"
       group:
         kind: run
@@ -54,7 +54,7 @@ commands:
     exec:
       label: 4.Run
       component: tools
-      workingDir: ${PROJECTS_ROOT}/devspaces-gamification/ds-challenge-03
+      workingDir: ${PROJECTS_ROOT}/ds-challenge03/src
       commandLine: "dotnet run"
       group:
         kind: run
@@ -62,7 +62,7 @@ commands:
     exec:
       label: 5.Run (Hot Reload)
       component: tools
-      workingDir: ${PROJECTS_ROOT}/devspaces-gamification/ds-challenge-03
+      workingDir: ${PROJECTS_ROOT}/ds-challenge03/src
       commandLine: "dotnet watch run"
       group:
         kind: run
