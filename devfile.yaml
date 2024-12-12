@@ -1,13 +1,6 @@
 schemaVersion: 2.2.2
 metadata:
   name: challenge3-workspace
-attributes:
-  .vscode/extensions.json: |
-    {
-      "recommendations": [
-      "cnshenj.vscode-task-manager"
-      ]
-    }
 components:
   - name: tools
     container:
