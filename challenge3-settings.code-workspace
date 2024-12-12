@@ -1,14 +1,5 @@
 {
-	"folders": [
-		{
-			"name": "src",
-			"path": "/projects/ds-challenge03/src"
-		},
-		{
-			"name": "test",
-			"path": "/projects/ds-challenge03/test"
-		}
-	],
+	
 	"extensions": {
 		"recommendations": [
 			"redhat.vscode-yaml",
