@@ -8,11 +8,11 @@
 * It's time to create standardized commands. You will create two commands in devfile.yaml
     * Create 1st command with id "Build" and label (1. Build the application) inside devfile to execute below command
       ```bash
-      ./dotnet build
+      dotnet build
       ```
     * Create 2nd command with id "Run" and lable (2. Run the Application) inside devfile to execute below command
       ```bash
-      ./dotnet run
+      dotnet run
       ```
     * Leverage the Resources section and find how you can create commands in devfile.yaml
 * Creating Two Endpoints in "tools" container of the devfile
@@ -34,9 +34,9 @@
 * Invoking "base-challenge" endpoint displays an image of the "Developer Flow"
 ![ ](docs/images/challenge03.endpoint.jpg)
 
-* Invoking "greet-attendee" endpoint (or executing below command in the terminal) displays a response "Hello Challenge Attendees"
+* Invoking "greet-attendee" endpoint (or executing below command in the terminal) displays a response "Hello, DevSpaces"
     ```bash
-    curl localhost:5152/api/hello
+    curl localhost:5152/api/hello?name=DevSpaces
     ```
 * Leverage your /tests/ space as much as you can for accuracy and validation!
 
