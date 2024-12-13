@@ -4,8 +4,7 @@ metadata:
 components:
   - name: tools
     container:
-      image: registry.redhat.io/devspaces/udi-rhel8:3.17
-      # image: quay.io/cgruver0/che/universal-developer-image:latest
+      image: quay.io/cgruver0/che/dot-net:fedora
       mountSources: true
       volumeMounts:
         - name: nuget
